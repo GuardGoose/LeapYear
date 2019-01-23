@@ -12,24 +12,31 @@ import java.util.Arrays;
 public class LeapYear {
 	
 	public static void main(String[] args) {
+		LeapYear.calcYear(2019);
+	
+	}
+	
+	public static void calcYear(int year) {
 		int[] yArray;
 		yArray = new int[20];
-		int year = 2019;
 		int i = 0;
+		int y = 0;
+		year = y;
 		
-		if (i < 20) {
-			if(year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) {
-				yArray[i] = year;
-				System.out.println(Arrays.toString(yArray));
+		while (i < 20) {
+			if(y % 4 == 0 && (y % 100 != 0 || y % 400 == 0)) {
+				yArray[i] = y;
 				i++;
 			} else {
 				i++;
+			} if (i == 20) {
+					for (int a = 0; a < yArray.length; a++) {
+						System.out.print(yArray[a]+" ");
+					} 
 			}
-		} else {
-			System.out.println(Arrays.toString(yArray));
 		}
 		
-	
 	}
+	
 
 }
